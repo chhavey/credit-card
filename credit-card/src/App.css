@@ -1,11 +1,38 @@
 .App {
-    text-align: center;
+    margin:0;
+    padding:0;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.Card {
+    background-image: url(./images/background2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60vh;
+    order: 1;
 }
 
 .Form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 4rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   order: 2;
 }
+
+@media (max-width: 768px) {
+    .App {
+        flex-direction: column;
+    }
+
+    .Form {
+        flex: 100%;
+    }
+    .Card {
+        flex: 44%;
+        width: auto;
+    }
+}
+

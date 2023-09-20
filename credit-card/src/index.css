@@ -16,5 +16,4 @@ body {
 ::placeholder {
     color: var(--white-violet);
     font-weight: 500;
-    font-family: 'Space Grotesk', sans-serif;
 }

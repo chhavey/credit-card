@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    border: 2px solid black;
+    background-color: var(--white);
 }
 
 .container form {
@@ -25,6 +25,7 @@
     border-radius: 5px;
     font-size: 18px;
     box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .container input:focus {
@@ -67,3 +68,22 @@
     text-align: left;
     margin-top: -15px;
 }
+
+
+@media (min-width: 375px) {
+    .container label {
+      letter-spacing: 2px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 22rem;
+      margin-left: 3rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 27rem;
+    }
+  }

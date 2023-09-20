@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Form.css'
 
-function Form() {
+function Form(props) {
 
     const [values, setValues] = useState({
         name: '',
@@ -11,6 +11,7 @@ function Form() {
         cvc: '',
     });
     const [formErrors, setFormErrors] = useState({});
+    const { onFormChange } = props;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -26,7 +27,7 @@ function Form() {
         setFormErrors(errors);
 
         if (Object.keys(errors).length === 0) {
-            // thankyou page
+            onFormChange(values);
         }
     };
 
@@ -99,7 +100,6 @@ function Form() {
 
     return (
         <div className='container'>
-
             <form onSubmit={handleSubmit}>
                 <label>CARDHOLDER NAME</label>
                 <input

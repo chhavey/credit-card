@@ -1,0 +1,212 @@
+/* .frontside {
+    transform: translate(40%, calc(50vh - 110%));
+}
+
+.backside {
+  transform: translate(55%, calc(50vh - 95%));
+}
+
+@media (max-width: 640px) {
+    .backside{
+        width: 250px;
+        height: auto;
+    }
+} */
+
+.card-container {
+    position: relative;
+    height: calc(100vh - 65vh);;
+}
+
+.cardContainer {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    width: 300px;
+    bottom: 7rem;
+}
+
+.inner {
+    position: relative;
+}
+
+.cardBack {
+    background-size: cover;
+    background-image: url('../../images/backside.png');
+    width: 282px;
+    height: 159px;
+    position: absolute;
+    left: 20px;
+    border-radius: 10px;
+    bottom: -69px;
+}
+
+.cardFront {
+    position: absolute;
+    display: flex;
+    width: 282px;
+    height: 159px;
+    background-size: cover;
+    background-image: url('../../images/frontside.png');
+    left: -20px;
+    border-radius: 10px;
+}
+
+.cardNumber {
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+
+.frontside {
+    padding: 1.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.upperLine {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.lowerLine {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.backside {
+    position: relative;
+}
+
+.backside p {
+    color: var(--white);
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    position: absolute;
+    right: 30px;
+    top: 59px;
+}
+
+.fillCircle {
+    background-color: var(--white);
+    border-radius: 50%;
+    display: block;
+    height: 37px;
+    width: 37px;
+}
+
+.hollowCircle {
+    background-color: transparent;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+@media (min-width: 640px) {
+    .cardBack {
+        width: 305px;
+        height: 167px;
+    }
+
+    .cardFront {
+        width: 305px;
+        height: 167px;
+    }
+
+    .cardNumber {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .backside p {
+        right: 40px;
+        top: 62px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .card-container {
+        height: 100%;
+        width: 33%;
+    }
+
+    .cardContainer {
+        position: absolute;
+        bottom: 50%;
+        margin: auto 0;
+        left: 85px;
+    }
+
+    .cardBack {
+        right: -30%;
+        width: 335px;
+        height: 183px;
+        bottom: -200px;
+    }
+
+    .cardFront {
+        bottom: 50%;
+        right: -20%;
+        width: 335px;
+        height: 183px;
+    }
+
+    .lowerLine {
+        font-size: 12px;
+    }
+
+    .backside p {
+        right: 45px;
+        top: 70px;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /* For desktop */
+.cardContainer {
+    left: 142px;
+    right: unset;
+}
+
+.card-container {
+    width: 28rem;
+}
+
+.cardFront {
+    left: unset;
+    right: -17%;
+    top: -15rem;
+}
+
+.cardBack {
+    top: 55%;
+}
+
+.cardBack,
+.cardFront {
+    width: 408px;
+    height: 223px;
+}
+
+.cardNumber {
+    font-size: 28px;
+}
+
+.backside p {
+    right: 51px;
+    top: 89px;
+}
+}
