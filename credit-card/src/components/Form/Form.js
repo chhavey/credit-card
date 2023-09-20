@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 import './Form.css'
 
 function Form(props) {
@@ -28,6 +30,11 @@ function Form(props) {
 
         if (Object.keys(errors).length === 0) {
             onFormChange(values);
+            toast.success('Form submitted successfully!', {
+                position: toast.POSITION.TOP_CENTER,
+                autoClose: 3000, // Toast will auto-close after 3 seconds
+            });
+
         }
     };
 
@@ -164,6 +171,7 @@ function Form(props) {
                     Confirm
                 </button>
             </form>
+            <ToastContainer />
         </div>
     );
 }
